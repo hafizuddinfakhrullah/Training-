@@ -1,0 +1,125 @@
+:root {
+    --color-sedan: coral;
+    --color-suv: darkolivegreen;
+    --color-luxury: darkslategray;
+    --color-text: floralwhite;
+}
+
+/*footer*/
+.attribution { font-size: 1.5rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Dongle', sans-serif;
+}
+
+/*Grid*/
+.grid--1x3{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);    
+}
+
+/*icon*/
+.icon {
+    padding-top: 1rem;
+}
+
+/*type of car*/
+.car {
+    padding: 2rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.sedan {
+    background-color: var(--color-sedan);
+    border-radius: 1rem 1rem 0 0 ;
+}
+
+.suv {
+    background-color: var(--color-suv);
+}
+
+.luxury {
+    background-color: var(--color-luxury);
+    border-radius: 0 0 1rem 1rem;
+}
+
+h1 {
+    color: var(--color-text);
+    font-weight: 700;   
+    font-size: xx-large;    
+}
+
+/*card--description*/
+.description {
+    color: var(--color-text);
+    font-size: x-large; 
+    font-weight: 300;
+    text-align: justify;   
+}
+
+/*Button*/
+.btn {
+    margin: 3rem 0 3rem 0;
+    padding: 1rem 4rem ;
+    border: 1px solid white; 
+    border-radius: 2rem;   
+    cursor: pointer;    
+    font-size: 2.4rem;         
+    white-space: nowrap;
+}
+
+.btn--outline {      
+
+}
+
+.btn--sedan {
+    background: var(--color-sedan);   
+    color: var(--color-text);
+}
+.btn--sedan:hover {
+    background: white; 
+    color: var(--color-sedan);   
+}
+
+.btn--suv {
+    background: var(--color-suv);   
+    color: var(--color-text);
+}
+.btn--suv:hover {
+    background: white; 
+    color: var(--color-suv);   
+}
+
+.btn--luxury {
+    background: var(--color-luxury);   
+    color: var(--color-text);
+}
+.btn--luxury:hover {
+    background: white; 
+    color: var(--color-luxury);   
+}
+
+@media screen and (min-width: 600px) {
+    .sedan {
+        background-color: coral;
+        border-radius: 1rem 0 0 1rem;
+    }
+
+    .luxury {
+        background-color: darkslategray;
+        border-radius: 0 1rem 1rem 0;
+    }
+    
+    .grid--1x3 {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 100%;
+    }
+}
