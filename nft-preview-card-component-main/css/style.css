@@ -1,0 +1,135 @@
+:root {
+--Soft-blue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+--main-BG: hsl(217, 54%, 11%);
+--card-BG: hsl(216, 50%, 16%);
+--line: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+--card-margin: 2rem;
+--margin-top-bottom: 2.4rem;
+--card-padding: 2.5rem;
+
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+}
+
+html {
+    font-size: 62.5%;    
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--main-BG);
+    position: relative;
+    overflow-x: hidden;
+    
+}
+
+.container {        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    margin: var(--card-margin);
+}
+
+/*card*/
+.card {        
+    background-color:var(--line);
+    border-radius: 2%;
+    padding: var(--card-padding);
+}
+
+.card-img {        
+    border-radius: 2%;
+    width: 100%;    
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img::after {
+    color: var(--Cyan);
+    content: url(/images/icon-view.svg);
+    background: var(--Cyan);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition:all 0.25s ease ;
+}
+
+.card-img:hover::after {
+    opacity: 1;
+}
+
+/*Typhograpgy*/
+.equilibrium h2,
+.creator-name {
+    color: var(--White);
+    cursor: pointer;
+}
+
+.equilibrium h2:hover,
+.creator-name:hover {
+    color: var(--Cyan);
+}
+
+.equilibrium p,
+.value .days,
+.creator p{
+    color: var(--Soft-blue);
+}
+
+.coin {
+    color: var(--Cyan);
+}
+
+.value {
+    margin: var(--margin-top-bottom) 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+}
+
+/*creator profile*/
+.creator {
+    border-top: 1px solid var(--Soft-blue);
+}   
+
+.creator img {
+    float: left;
+    height: 5.3rem;
+    border: 2px solid var(--White);
+    border-radius: 50%;    
+    margin-top: 3rem;
+    margin-right: var(--card-margin);
+}
+
+.creator .creation {
+    padding: 7%;
+    text-align: left;
+    line-height: .6;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+
+/*footer*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { 
+    color: hsl(228, 45%, 44%);         
+}
+
+.footer {
+    width: 100%;
+    padding: .8px;
+    background-color: var(--White);
+}
